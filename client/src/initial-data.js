@@ -1,10 +1,10 @@
 const initialData = {
     tasks: {
-        'task-1': {id: 'task-1', content: 'take out trash'},
-        'task-2': {id: 'task-2', content: 'Wash the car'},
-        'task-3': {id: 'task-3', content: 'Do laundry'},
-        'task-4': {id: 'task-4', content: 'Buy the groceries'},
-        'task-5': {id: 'task-5', content: 'Make dinner'},
+        'task-1': {id: 'task-1', content: 'S1'},
+        'task-2': {id: 'task-2', content: 'S2'},
+        'task-3': {id: 'task-3', content: 'S3'},
+        'task-4': {id: 'task-4', content: 'S4'},
+        'task-5': {id: 'task-5', content: 'S5'},
     },
     columns: {
         'column-1': {
