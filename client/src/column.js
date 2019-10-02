@@ -11,17 +11,18 @@ const Container = styled.div`
     border-radius: 2px;
     width: 220px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     `;
 const Title = styled.h3`
     padding: 8px;
+    min-width: 50px
 `;
-const TaskList = styled.div`
+const StopsList = styled.div`
     padding: 8px;
     transition: background-color 0.2s ease;
     background-color: ${props => (props.isDraggingOver ? 'skyblue' : 'white')}
-    flex-grow: 1;
-    min-height: 100px;
+    display: flex;
+    min-width: 200px
 `;
 
 export default class Column extends React.Component {
@@ -29,15 +30,15 @@ export default class Column extends React.Component {
         return (
             <Container>
                 <Title>{this.props.column.title}</Title>
-                <Droppable droppableId={this.props.column.id}>
+                <Droppable droppableId={this.props.column.id} direction='horizontal'>
                 {(provided, snapshot) => ( 
-                <TaskList
+                <StopsList
                 ref={provided.innerRef} 
                 {...provided.droppableProps}
                 isDraggingOver={snapshot.isDraggingOver}>
                     {this.props.tasks.map((task, index) => (<Task key={task.id} task={task} index={index} />))}
                     {provided.placeholder}
-                </TaskList>
+                </StopsList>
                 )}
                 </Droppable>
             </Container>

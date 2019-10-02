@@ -4,13 +4,16 @@ import { Draggable } from 'react-beautiful-dnd'
  
 
 const Container = styled.div`
-    margin-bottom: 8px;
+    margin-right: 8px;
     border: 1px solid lightgrey;
-    padding: 8px;
-    border-radius: 2px;
+    
+    border-radius: 50%;
+    height: 40px;
+    width: 40px;
     background-color: ${props => (props.isDragging ? 'lightgreen' : 'white')}
-
     display: flex;
+    justify-content: center;
+    align-items: center
     `;
 
 
